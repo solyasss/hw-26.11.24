@@ -11,6 +11,8 @@ namespace hw_26._11._24
         public Form1()
         {
             InitializeComponent();
+            iMoveFirstToolStripMenuItem.Checked = true;
+            easyToolStripMenuItem.Checked = true;
             new_game();
         }
 
@@ -18,7 +20,7 @@ namespace hw_26._11._24
         {
             board = new string[3, 3];
 
-            player_turn = checkbox_first_move.Checked;
+            player_turn = iMoveFirstToolStripMenuItem.Checked;
 
             foreach (Control c in tableLayoutPanel1.Controls)
             {
@@ -33,11 +35,6 @@ namespace hw_26._11._24
             {
                 computer_move();
             }
-        }
-
-        private void button_new_game_Click(object sender, EventArgs e)
-        {
-            new_game();
         }
 
         private void Form1_Click(object sender, EventArgs e)
@@ -71,7 +68,7 @@ namespace hw_26._11._24
 
         private void update(Button btn, string symbol)
         {
-            int index = int.Parse(btn.Name.Substring(6)) - 1; 
+            int index = int.Parse(btn.Name.Substring(6)) - 1;
             int i = index / 3;
             int j = index % 3;
             board[i, j] = symbol;
@@ -159,9 +156,9 @@ namespace hw_26._11._24
 
         private int hard_level()
         {
-            if (radio_easy.Checked)
+            if (easyToolStripMenuItem.Checked)
                 return 1;
-            else if (radio_medium.Checked)
+            else if (mediumToolStripMenuItem.Checked)
                 return 2;
             else
                 return 3;
@@ -261,7 +258,7 @@ namespace hw_26._11._24
             }
             if (count_diag2 == 2 && empty_diag2_i != -1)
             {
-               move(empty_diag2_i, empty_diag2_j, computer_symbol);
+                move(empty_diag2_i, empty_diag2_j, computer_symbol);
                 return true;
             }
 
@@ -276,6 +273,43 @@ namespace hw_26._11._24
             Button btn = this.Controls.Find(button_name, true)[0] as Button;
             btn.Text = symbol;
             btn.Enabled = false;
+        }
+
+        private void startNewGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new_game();
+        }
+
+        private void iMoveFirstToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void difficultyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void easyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            set_difficulty(1);
+        }
+
+        private void mediumToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            set_difficulty(2);
+        }
+
+        private void hardToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            set_difficulty(3);
+        }
+
+        private void set_difficulty(int level)
+        {
+            easyToolStripMenuItem.Checked = level == 1;
+            mediumToolStripMenuItem.Checked = level == 2;
+            hardToolStripMenuItem.Checked = level == 3;
         }
     }
 }
