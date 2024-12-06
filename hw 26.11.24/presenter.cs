@@ -1,19 +1,19 @@
 using System;
 using System.Linq;
-using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace hw_26._11._24
 {
     public class presenter
     {
-        private readonly i_krestiki_noliki_view view;
-        private readonly krestiki_noliki_model model;
+        private readonly i_view view;
+        private readonly mod model;
         private readonly Random random;
 
-        public presenter(i_krestiki_noliki_view view)
+        public presenter(i_view view)
         {
             this.view = view;
-            model = new krestiki_noliki_model();
+            model = new mod();
             random = new Random();
 
             this.view.cell_clicked += on_cell_clicked;
@@ -41,12 +41,12 @@ namespace hw_26._11._24
             }
         }
 
-        private void on_new_game(object sender, EventArgs e)
+        private void on_new_game(object? sender, EventArgs e)
         {
             start_new_game();
         }
 
-        private void on_cell_clicked(object sender, int index)
+        private void on_cell_clicked(object? sender, int index)
         {
             if (!model.player_turn)
                 return;
@@ -228,9 +228,9 @@ namespace hw_26._11._24
             return false;
         }
 
-        private System.Collections.Generic.List<(int, int)> get_empty_cells()
+        private List<(int, int)> get_empty_cells()
         {
-            var list = new System.Collections.Generic.List<(int, int)>();
+            var list = new List<(int, int)>();
             for (int i = 0; i < 3; i++)
                 for (int j = 0; j < 3; j++)
                     if (string.IsNullOrEmpty(model.board[i, j]))

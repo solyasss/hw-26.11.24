@@ -51,13 +51,19 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tableLayoutPanel1.ColumnStyles.Add(
+                new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.34F));
+            this.tableLayoutPanel1.RowStyles.Add(
+                new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33F));
             this.tableLayoutPanel1.Controls.Add(this.button9, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.button8, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.button7, 0, 2);
@@ -72,84 +78,80 @@
 
             this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 300);
             this.tableLayoutPanel1.TabIndex = 0;
+            System.Drawing.Font buttonFont = new System.Drawing.Font("Microsoft Sans Serif", 24F,
+                System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             // 
-            // button1 to button9
-            // 
-
-            System.Drawing.Font buttonFont = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-
             // button1
+            // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = buttonFont;
             this.button1.Name = "button1";
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button2
+            // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Font = buttonFont;
             this.button2.Name = "button2";
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button3
+            // 
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Font = buttonFont;
             this.button3.Name = "button3";
             this.button3.TabIndex = 3;
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button4
+            // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button4.Font = buttonFont;
             this.button4.Name = "button4";
             this.button4.TabIndex = 4;
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button5
+            // 
             this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button5.Font = buttonFont;
             this.button5.Name = "button5";
             this.button5.TabIndex = 5;
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button6
+            // 
             this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button6.Font = buttonFont;
             this.button6.Name = "button6";
             this.button6.TabIndex = 6;
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button7
+            // 
             this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button7.Font = buttonFont;
             this.button7.Name = "button7";
             this.button7.TabIndex = 7;
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button8
+            // 
             this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button8.Font = buttonFont;
             this.button8.Name = "button8";
             this.button8.TabIndex = 8;
             this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.Form1_Click);
-
+            // 
             // button9
+            // 
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button9.Font = buttonFont;
             this.button9.Name = "button9";
             this.button9.TabIndex = 9;
             this.button9.UseVisualStyleBackColor = true;
-            this.button9.Click += new System.EventHandler(this.Form1_Click);
-
             // 
             // checkbox_first_move
             // 
@@ -213,7 +215,6 @@
             this.button_new_game.TabIndex = 12;
             this.button_new_game.Text = "Start new game";
             this.button_new_game.UseVisualStyleBackColor = true;
-            this.button_new_game.Click += new System.EventHandler(this.button_new_game_Click);
             // 
             // Form1
             // 
